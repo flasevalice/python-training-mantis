@@ -6,9 +6,10 @@
     "username": "administrator",
     "password": "root"
   },
-  "ftp": {
+  "james": {
     "host": "localhost",
-    "username": "mantis",
-    "password": "mantis"
+    "port": 4555,
+    "username": "root",
+    "password": "root"
   }
 }
