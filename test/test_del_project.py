@@ -25,5 +25,5 @@ def test_del_project(app, project):
     app.project.delete_project(project_rnd)
     new_projects_list = app.soap.get_projects_list()
     old_projects_list.remove(project_rnd)
-    assert sorted(old_projects_list, key=Project.name_or_empty) == sorted(new_projects_list, key=Project.name_or_empty)
+    assert sorted(old_projects_list, key=Project.id_or_max) == sorted(new_projects_list, key=Project.id_or_max)
     app.session.logout()
